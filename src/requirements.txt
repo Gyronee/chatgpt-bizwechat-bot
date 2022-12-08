@@ -1,0 +1,5 @@
+revChatGPT
+tornado
+requests
+Crypto
+pycryptodome
