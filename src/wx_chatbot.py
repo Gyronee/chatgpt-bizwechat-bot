@@ -59,5 +59,5 @@ class WXChatGPTBotHandler(RequestHandler):
             chatbot.reset()
         else:
             response = chatbot.get_response(content)
-            logging.info("[WX-Bot] Chatbot response: %s", response)
+            logging.info("[WX-Bot] Chatbot response for %s: %s", user, response)
             self.bot.send_msg(response, user)
