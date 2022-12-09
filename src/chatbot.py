@@ -21,6 +21,7 @@ class ChatBotWithExpiration:
         """
         self.bot.reset_chat()
         self._update_last_access_time()
+        return "[ChatBot] ChatGPT 会话已重置, 发送消息开始聊天"
 
     def get_response(self, text):
         """
