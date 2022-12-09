@@ -10,7 +10,7 @@ class ChatBotWithExpiration:
     def __init__(self, config) -> None:
         self.bot = Chatbot(config, conversation_id=None)
         self.last_access_time = datetime.now().timestamp()
-        self.err_msg = "[Chat-Bot] Request ChatGPT failed, please try again"
+        self.err_msg = "[Chat-Bot] 请求 ChatGPT 失败, 请重试"
 
     def _update_last_access_time(self):
         self.last_access_time = datetime.now().timestamp()
