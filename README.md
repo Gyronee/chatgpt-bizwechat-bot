@@ -62,6 +62,7 @@ python main.py
 ```
 
 5. Enjoy
+the bot url is `http(s)://host:port/chat`
 
 ## Credits
 - [ChatGPT](https://chat.openai.com/chat) from [OpenAI](https://openai.com)
