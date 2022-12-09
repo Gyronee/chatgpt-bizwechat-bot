@@ -22,8 +22,8 @@ class WXChatGPTBotHandler(RequestHandler):
 
     executor = ThreadPoolExecutor(4)
 
-    def initialize(self, config: dict) -> None:
-        self.bot = WXChatGPTBot(config.get('wx-bot', dict()), config.get('chatgpt', dict()))
+    def initialize(self, bot: WXChatGPTBot) -> None:
+        self.bot = bot
 
     def get(self):
         msg_signature = self.get_argument("msg_signature")
