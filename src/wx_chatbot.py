@@ -48,9 +48,13 @@ class WXChatGPTBotHandler(RequestHandler):
             xml_tree = ET.fromstring(msg)
             content = xml_tree.find("Content").text
             user = xml_tree.find("FromUserName").text
-        except:
-            logging.error("[WX-Bot] User request message parse failed: %s", xml_tree.text)
-        self.response_user_chat(user, content)
+            target = xml_tree.find("ToUserName").text
+            if target == self.bot.config['CorpID']:
+                self.response_user_chat(user, content)
+            else:
+                raise ValueError("CorpID Mismatch")
+        except Exception as e:
+            logging.error("[WX-Bot] User request message parse failed: %s, %s", e, xml_tree.text)
         
     @run_on_executor
     def response_user_chat(self, user, content):
