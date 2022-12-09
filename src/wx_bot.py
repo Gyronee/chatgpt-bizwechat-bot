@@ -60,7 +60,7 @@ class WeChatBot:
         }
         logging.info("[WX-Bot] Reply %s: %s", user, text)
         try:
-            response = requests.post(url, data=msg, timeout=5).json()
+            response = requests.post(url, json=msg, timeout=5).json()
             logging.info("[WX-Bot] Response From Wechat server: %s", response)
         except Exception as e:
             logging.error("[WX-Bot] Rely message failed: %s", e)
