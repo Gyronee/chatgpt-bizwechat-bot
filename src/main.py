@@ -8,6 +8,8 @@ if __name__ == "__main__":
     with open("config.yaml", "r") as f:
         conf = yaml.safe_load(f)
 
+    tornado.options.parse_command_line()
+
     application = Application([
         (r"/chat", WXChatGPTBotHandler, {"config": conf})
     ])
