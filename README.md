@@ -27,6 +27,8 @@ A BizWechat Bot that integrates with OpenAI's [ChatGPT](https://openai.com/blog/
 docker run -d --name wx-chatbot -p 8868:8868 -v <YOUR PATH TO CONFIG FILE>:/wx-chatbot/config.yaml gyronee/chatgpt-bizwechat-bot:latest
 ```
 
+the bot url is `http(s)://host:port/chat`
+
 ### Install from source
 1. Clone the repository and navigate to the project directory:
 
