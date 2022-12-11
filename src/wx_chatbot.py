@@ -32,7 +32,7 @@ class WXChatGPTBotHandler(RequestHandler):
         echostr = self.get_argument("echostr")
         ret, echostr = self.bot.wxcpt.VerifyURL(msg_signature, timestamp, nonce, echostr)
         if ret !=0 :
-            logging.error("[WX-Bot] VerifyURL ret: {ret}")
+            logging.error("[WX-Bot] VerifyURL ret: %s", ret)
         self.write(echostr)
 
     @gen.coroutine
@@ -43,7 +43,7 @@ class WXChatGPTBotHandler(RequestHandler):
         req_data = self.request.body.decode()
         ret, msg = self.bot.wxcpt.DecryptMsg(req_data, req_signature, req_timestamp, req_nonce)
         if ret != 0:
-            logging.error("[WX-Bot] Decrypt msg ret: {ret}")
+            logging.error("[WX-Bot] Decrypt msg ret: %s", ret)
         try:
             xml_tree = ET.fromstring(msg)
             content = xml_tree.find("Content").text
