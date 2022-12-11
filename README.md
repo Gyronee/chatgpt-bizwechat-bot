@@ -3,6 +3,9 @@ A BizWechat Bot that integrates with OpenAI's [ChatGPT](https://openai.com/blog/
 
 基于 [acheong08/ChatGPT](https://github.com/acheong08/ChatGPT) 开发的企业微信聊天机器人
 
+## Screeeshots
+<img src="https://user-images.githubusercontent.com/4464307/206640973-a9790f2f-2452-4edc-b82f-e37bfface7dd.png" width="250"/>
+
 ## Features
 - [x] Reply to specific messages / 回复用户信息
 - [x] Can reset conversation thread with the `/reset` command / 发送 `/reset` 来重置对话
@@ -23,6 +26,8 @@ A BizWechat Bot that integrates with OpenAI's [ChatGPT](https://openai.com/blog/
 ```bash
 docker run -d --name wx-chatbot -p 8868:8868 -v <YOUR PATH TO CONFIG FILE>:/wx-chatbot/config.yaml gyronee/chatgpt-bizwechat-bot:latest
 ```
+
+the bot url is `http(s)://host:port/chat`
 
 ### Install from source
 1. Clone the repository and navigate to the project directory:
@@ -59,6 +64,8 @@ python main.py
 ```
 
 5. Enjoy
+
+the bot url is `http(s)://host:port/chat`
 
 ## Credits
 - [ChatGPT](https://chat.openai.com/chat) from [OpenAI](https://openai.com)
