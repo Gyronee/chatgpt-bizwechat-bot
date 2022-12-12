@@ -8,7 +8,11 @@ class ChatBotWithExpiration:
     ChatGPTBot with recording last access time
     """
     def __init__(self, config) -> None:
-        self.bot = Chatbot(config, conversation_id=None)
+        try:
+            logging.info("[ChatBot] 初始化 Chatbot...")
+            self.bot = Chatbot(config, conversation_id=None)
+        except Exception as e:
+            logging.error("[ChatBot] 初始化 Chatbot 失败: %s", e)
         self.last_access_time = datetime.now().timestamp()
         self.err_msg = "[Chat-Bot] 请求 ChatGPT 失败, 请重试"
 
