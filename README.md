@@ -1,7 +1,7 @@
 # ChatGPT BizWechat Bot
-A BizWechat Bot that integrates with OpenAI's [ChatGPT](https://openai.com/blog/chatgpt/) to provide answers. Ready to use with minimal configuration required. Based on [acheong08/ChatGPT](https://github.com/acheong08/ChatGPT)
+A BizWechat Bot that integrates with OpenAI's [ChatGPT](https://openai.com/blog/chatgpt/) to provide answers. Ready to use with minimal configuration required. Based on [acheong08/ChatGPT](https://github.com/acheong08/ChatGPT) and [terry3041/pyChatGPT](https://github.com/terry3041/pyChatGPT)
 
-基于 [acheong08/ChatGPT](https://github.com/acheong08/ChatGPT) 开发的企业微信聊天机器人
+基于 [acheong08/ChatGPT](https://github.com/acheong08/ChatGPT) 和 [terry3041/pyChatGPT](https://github.com/terry3041/pyChatGPT) 开发的企业微信聊天机器人
 
 ## Screeeshots
 <img src="https://user-images.githubusercontent.com/4464307/206640973-a9790f2f-2452-4edc-b82f-e37bfface7dd.png" width="250"/>
@@ -70,9 +70,10 @@ the bot url is `http(s)://host:port/chat`
 ## Credits
 - [ChatGPT](https://chat.openai.com/chat) from [OpenAI](https://openai.com)
 - [acheong08/ChatGPT](https://github.com/acheong08/ChatGPT) for reverse engineering ChatGPT APIs
+- [terry3041/pyChatGPT](https://github.com/terry3041/pyChatGPT) for reverse engineering ChatGPT APIs and bypass cloudflare
 
 ## Disclaimer
 This is a personal project and is not affiliated with OpenAI in any way.
 
 ## Changlog
-- 2022-12-14: Change to use pyChatGPT for bypass cloudflare
+- 2022-12-14: Change to use [pyChatGPT](https://github.com/terry3041/pyChatGPT
