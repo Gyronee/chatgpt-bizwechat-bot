@@ -73,3 +73,6 @@ the bot url is `http(s)://host:port/chat`
 
 ## Disclaimer
 This is a personal project and is not affiliated with OpenAI in any way.
+
+## Changlog
+- 2022-12-14: Change to use pyChatGPT for bypass cloudflare
